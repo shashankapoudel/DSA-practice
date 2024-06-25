@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Search</title>
+    <script>
+        let data = [3, 5, 9, 10, 23, 45, 40]
+        let item = 10;
+        let index = undefined
+        for (let i = 0; i <= data.length - 1; i++) {
+            if (data[i] == item) {
+                index = i
+            }
+        }
+        // console.log(index);
+        // console.log(data.indexOf(item))//built in function to seqarch in js
+        data.splice(3, 1)//to delete 4th element in array
+        console.log(data);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
