@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Head and tail recursion</title>
+    <script>
+        // function color() {
+        //     let data = 20;
+        //     console.log(data);
+        // }
+        // function days() {
+        //     color()
+        // }
+        // function fruits() {
+        //     days()
+        // }
+        // function topFunction() {
+        //     fruits()
+        // }
+        // topFunction()
+
+
+        
+        //Head and tail recursion
+        // function test(x) {
+        //     console.log(x)//head recursion //output:5,4,3,2,1,0
+        //     if (x > 0) {
+        //         test(x - 1)
+        //     }
+        // }
+        // test(5)
+
+        function test(x) {
+
+            if (x > 0) {
+                test(x - 1)
+            }
+            console.log(x);//tail recursion //output:0,1,2,3,4,5--this console will only execute after the above condition becomes false.when the condition is true the loop will continue to execute
+        }
+        test(5)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
