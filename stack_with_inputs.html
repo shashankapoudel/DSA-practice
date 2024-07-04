@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Handle stack with buttons</title>
+    <script>
+        let data = []
+        let currentSize = data.length;
+        let max = 6;
+        function push() {
+            let val = document.getElementById('txt').value;
+            if (currentSize >= max) {
+                alert('stack is full you cannot add more ' + val)
+            } else {
+
+                data[currentSize] = val;
+                currentSize += 1;
+                data.length = currentSize;
+                document.getElementById('txt').value = ""
+                console.log('element added in stack');
+
+            }
+
+        }
+        function pop() {
+            if (currentSize > 0) {
+                currentSize -= 1;
+                data.length = currentSize;
+            } else {
+                alert('You have no elements in array')
+            }
+
+        }
+        function display() {
+            for (let i = 0; i <= data.length - 1; i++) {
+                console.log('stack element no is ', i, 'and the value is', data[i]);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter element here" id="txt" />
+    <button onclick="push()">Add element to stack</button>
+    <button onclick="pop()">Remove element from stack</button>
+    <button onclick="display()">Display all elements of stack</button>
+</body>
+
+</html>
