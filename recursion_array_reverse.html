@@ -5,36 +5,36 @@
 
     <title>Recursion array with reverse</title>
     <script>
-        // let data = [13, 8, 25, 21, 40, 7, 100]
-        // let start = 0;
-        // let end = data.length - 1
-
-        // function customReverse() {
-        //     while (start <= end) {
-
-        //         temp = data[start];
-        //         data[start] = data[end];
-        //         data[end] = temp;
-        //         start++
-        //         end--
-        //     }
-        // }
-        // customReverse()
-        // console.log(data);
-
-
         let data = [13, 8, 25, 21, 40, 7, 100]
-        function customReverse(data, start, end) {
-            console.log(data);
-            if (start <= end) {
+        let start = 0;
+        let end = data.length - 1
+
+        function customReverse() {
+            while (start <= end) {
 
                 temp = data[start];
                 data[start] = data[end];
                 data[end] = temp;
-                customReverse(data, start + 1, end - 1);
+                start++
+                end--
             }
         }
-        customReverse(data, 0, data.length - 1)
+        customReverse()
+        console.log(data);
+
+
+        // let data = [13, 8, 25, 21, 40, 7, 100]
+        // function customReverse(data, start, end) {
+        //     console.log(data);
+        //     if (start <= end) {
+
+        //         temp = data[start];
+        //         data[start] = data[end];
+        //         data[end] = temp;
+        //         customReverse(data, start + 1, end - 1);
+        //     }
+        // }
+        // customReverse(data, 0, data.length - 1)
     </script>
 </head>
 
